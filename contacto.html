@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Mi curriculum de vida</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/grid.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+		<link rel="stylesheet" type="text/css" href="css/grid.css">
+	</head>
+
+	<body>		
+	    <!-- Menú -->
+		<nav class="navbar">
+			<ul class="navbar-list">
+				<li class="navbar-item">
+					<a href="index.html">Inicio</a>
+				</li>
+				<li class="navbar-item">
+					<a href="index.html">Quien soy</a>
+				</li>
+				<li class="navbar-item">
+					<a href="index.html">Estudios</a>
+				</li>
+				<li class="navbar-item">
+					<a href="index.html">Experiencia</a>
+				</li>
+				<li class="navbar-item">
+					<a href="index.html">Sobre mí</a>
+				</li>
+				<li class="navbar-item">
+					<a href="contacto.html">Contacto</a>
+				</li>
+			</ul>
+		</nav>
+
+
+		<br>
+		<br>
+		<br>
+		<h2 class="titlecontact">Ponte en contacto conmigo</h2>
+		<br>
+
+		<!-- Forma de contacto -->
+		<div class="container">
+			<section class="row section-container">
+
+				<div class="col-6" style="overflow-x:auto;">
+       				<form id="contactform" class="form" name="contactform" method="post" novalidate>
+
+					<!-- <form id="contactform" class="form" name="contactform" method="post" 
+					      onSubmit="return formValidation();"> -->
+						<div class="form-row center">
+							<label for="nombre">Nombre:</label>
+							<input type="text" id="nombre" name="nombre" 
+							       placeholder="Nombre(s) y apellido(s)" 
+							       pattern="[a-zA-Z ]*" 
+							       maxlength="100" 
+							       required>					
+						</div>
+
+						<div class="form-row center">
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" 
+							       placeholder="name@company.com" 
+							       pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" 
+								   maxlength="50" 
+								   required>
+						</div>
+
+						<div class="form-row center">
+							<label for="telefono">Teléfono:</label>
+							<input type="tel" id="telefono" name="telefono"
+							       placeholder="10 números"						     
+							       pattern= "/^\d{10}$/"
+							       <input type="tel" pattern="^\d{4}-\d{3}-\d{4}$" >
+							       required>
+						</div>
+
+						<div class="form-row center">
+							<label for="contacto">Como diste conmigo?:</label>
+							<select id="contacto" required>
+							   <option>Internet</option>
+					           <option>Redes sociales</option>
+					           <option>Amigos en común</option>
+					           <option>Microsip</option>
+					           <option selected>Otros</option>				           
+					       </select>				        
+						</div>
+
+						<div class="form-row center">
+							<label id="labelComentario" 
+							       class="labelComentario" 
+							       for="comentarios">Comentarios: 
+							</label>
+
+							<textarea id="comentarios" 
+									  placeholder="Tu comentario"
+									  rows="6" 
+									  value =""
+									  widht = "100%">
+						    </textarea>
+						</div>
+
+						<div class="form-row center">
+     						<!--<button type="submit" id="enviar" name="submit" value="Submit">Enviar </button> -->
+							<input type="submit" name="submit" value="Submit"/>  
+							<!-- <input type="submit" id="enviar"  name="enviar"> -->
+						 </div>
+					</form>
+				</div>
+			</section>
+		</div>          
+
+		<footer class="footer">
+			Federico Sánchez    2016  Comarca ti™
+		</footer>
+
+	</body>
+	<script src="js/ValidaFormaContacto.js"></script>
+</html>
